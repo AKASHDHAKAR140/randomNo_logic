@@ -85,6 +85,27 @@ const createRandomString = function (strType, strLength) {
         return false;
     }
 };
+
+
+function  OTP(){
+  const otplength = 6;
+  const digits = "0123456789";
+  let genOTP= "";
+  for( let i=0;i<otplength;i++){
+    genOTP += digits[crypto.randomInt(0,digits.length)]
+    }
+    return genOTP
+}
+
+var transacttionid = ()=>{
+  const bytes = crypto.randomBytes(8);
+  console.log(bytes,"kjhgfd")
+  const transact = bytes.toString("hex")
+
+  return transact
+
+}
   
-  console.log(createRandomString());
+  console.log(OTP());
+
   
